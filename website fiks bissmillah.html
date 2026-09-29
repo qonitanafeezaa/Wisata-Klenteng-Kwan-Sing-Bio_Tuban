@@ -1,0 +1,3063 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kwan Sing Bio — Heritage Tuban</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#E8D1A7;
+    color:#35120F;
+    font-family:"DM Sans",sans-serif;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+:root{
+    --cream:#E8D1A7;
+    --beige:#F5F5DC;
+    --red:#8B0000;
+    --darkred:#650000;
+    --maroon:#800000;
+    --gold:#DAA520;
+    --dark:#35120F;
+}
+
+
+/* =========================
+   TEXTURE
+========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:9990;
+    opacity:.035;
+    background-image:
+    linear-gradient(45deg,var(--red) 1px,transparent 1px),
+    linear-gradient(-45deg,var(--red) 1px,transparent 1px);
+    background-size:32px 32px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:78px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 6%;
+
+    z-index:9999;
+
+    background:rgba(245,245,220,.95);
+    backdrop-filter:blur(12px);
+
+    border-bottom:3px solid var(--red);
+
+    transition:.4s;
+}
+
+.navbar.scrolled{
+    height:68px;
+    background:rgba(101,0,0,.97);
+    color:white;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:11px;
+}
+
+/* LOGO PEMERINTAH KABUPATEN TUBAN & AYO NING TUBAN */
+.top-logos{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-right:18px;
+    flex-shrink:0;
+}
+
+.top-logo{
+    object-fit:contain;
+    background:transparent;
+    padding:0;
+    border-radius:0;
+    mix-blend-mode:multiply;
+}
+
+.kab-tuban-logo{
+    width:42px;
+    height:42px;
+}
+
+.ayo-ning-logo{
+    width:68px;
+    height:48px;
+}
+
+.nav-left{
+    display:flex;
+    align-items:center;
+    flex-shrink:0;
+}
+
+.logo-icon{
+    font-size:30px;
+}
+
+.logo-title{
+    font-family:"Cormorant Garamond",serif;
+    font-size:24px;
+    font-weight:700;
+    line-height:.9;
+}
+
+.logo-sub{
+    font-size:9px;
+    letter-spacing:2px;
+    margin-top:5px;
+}
+
+.nav-menu{
+    display:flex;
+    gap:28px;
+    align-items:center;
+}
+
+.nav-menu a{
+    font-size:13px;
+    position:relative;
+}
+
+.nav-menu a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-7px;
+    width:0;
+    height:2px;
+    background:var(--gold);
+    transition:.3s;
+}
+
+.nav-menu a:hover::after{
+    width:100%;
+}
+
+.nav-button{
+    padding:11px 20px;
+    background:var(--red);
+    color:white;
+    border-radius:3px;
+    font-size:12px;
+    border:1px solid var(--gold);
+    transition:.3s;
+}
+
+.navbar.scrolled .nav-button{
+    background:var(--gold);
+    color:var(--dark);
+}
+
+.nav-button:hover{
+    transform:translateY(-2px);
+}
+
+
+/* =========================
+   LANTERN DECORATION
+========================= */
+
+.lantern{
+    position:absolute;
+    width:65px;
+    z-index:3;
+    animation:swing 4s ease-in-out infinite;
+}
+
+.lantern-left{
+    left:1.5%;
+    top:150px;
+    transform:scale(.78);
+}
+
+.lantern-right{
+    right:5%;
+    top:115px;
+    animation-delay:1s;
+}
+
+.lantern-string{
+    width:2px;
+    height:70px;
+    background:var(--red);
+    margin:auto;
+}
+
+.lantern-top{
+    width:46px;
+    height:9px;
+    background:var(--gold);
+    margin:auto;
+    border-radius:4px 4px 0 0;
+}
+
+.lantern-body{
+    height:76px;
+
+    background:
+    radial-gradient(
+        circle at center,
+        #b41414 0,
+        #8B0000 65%,
+        #650000 100%
+    );
+
+    border:3px solid var(--gold);
+
+    border-radius:22px 22px 28px 28px;
+
+    color:#F4D67D;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:30px;
+
+    box-shadow:
+    inset 8px 0 rgba(255,255,255,.08),
+    inset -8px 0 rgba(0,0,0,.12),
+    0 8px 18px rgba(0,0,0,.15);
+}
+
+.lantern-bottom{
+    width:48px;
+    height:10px;
+    background:var(--gold);
+    margin:auto;
+}
+
+.lantern-tassel{
+    width:3px;
+    height:35px;
+    background:var(--red);
+    margin:auto;
+}
+
+
+/* =========================
+   ORNAMENT
+========================= */
+
+.ornament-line{
+    height:19px;
+    width:100%;
+
+    background:
+    repeating-linear-gradient(
+        90deg,
+        var(--red) 0 14px,
+        var(--gold) 14px 19px,
+        transparent 19px 28px
+    );
+
+    border-top:2px solid var(--gold);
+    border-bottom:2px solid var(--red);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+
+    padding:135px 7% 80px;
+
+    display:grid;
+    grid-template-columns:43% 57%;
+
+    align-items:center;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle at 10% 25%,
+        rgba(218,165,32,.28),
+        transparent 25%
+    ),
+    linear-gradient(
+        110deg,
+        #E8D1A7 0%,
+        #E8D1A7 58%,
+        #800000 58%,
+        #650000 100%
+    );
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    right:0;
+    top:0;
+
+    width:42%;
+    height:100%;
+
+    background:
+    repeating-linear-gradient(
+        90deg,
+        rgba(218,165,32,.1) 0 2px,
+        transparent 2px 35px
+    );
+
+    pointer-events:none;
+}
+
+.hero-content{
+    position:relative;
+    z-index:20;
+    padding-left:35px;
+}
+
+.script-title{
+    font-family:"Allura",cursive;
+    font-size:47px;
+    color:var(--red);
+    line-height:1;
+    margin-bottom:20px;
+
+    animation:fadeUp .9s ease both;
+}
+
+.hero h1{
+    font-family:"Cormorant Garamond",serif;
+
+    color:var(--maroon);
+
+    font-size:clamp(65px,8vw,108px);
+
+    line-height:.78;
+
+    letter-spacing:-4px;
+
+    margin-bottom:30px;
+
+    animation:fadeUp 1s .15s ease both;
+}
+
+.hero h1 span{
+    color:var(--red);
+}
+
+.hero-description{
+    max-width:510px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:22px;
+
+    line-height:1.45;
+
+    margin-bottom:32px;
+
+    animation:fadeUp 1s .3s ease both;
+}
+
+.hero-description strong{
+    color:var(--red);
+}
+
+.hero-actions{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn-primary{
+    background:var(--red);
+    color:white;
+
+    padding:15px 24px;
+
+    border-radius:3px;
+
+    font-size:13px;
+
+    border:1px solid var(--gold);
+
+    transition:.3s;
+}
+
+.btn-primary:hover{
+    background:#650000;
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    border:2px solid var(--red);
+
+    color:var(--red);
+
+    padding:13px 23px;
+
+    background:rgba(245,245,220,.35);
+
+    border-radius:3px;
+
+    font-size:13px;
+
+    transition:.3s;
+}
+
+.btn-secondary:hover{
+    background:var(--red);
+    color:white;
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-visual{
+    position:relative;
+    z-index:4;
+}
+
+.hero-frame{
+    height:600px;
+
+    overflow:hidden;
+
+    border-radius:
+    210px
+    210px
+    8px
+    8px;
+
+    border:9px solid var(--beige);
+
+    box-shadow:
+    0 0 0 2px var(--gold),
+    25px 25px 0 var(--red),
+    35px 35px 0 rgba(218,165,32,.8);
+}
+
+.hero-frame img{
+    height:100%;
+    object-fit:cover;
+    transition:1s;
+}
+
+.hero-frame:hover img{
+    transform:scale(1.05);
+}
+
+.hero-tag{
+    position:absolute;
+
+    bottom:35px;
+    left:-35px;
+
+    background:var(--red);
+    color:white;
+
+    border:2px solid var(--gold);
+
+    padding:17px 26px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:19px;
+
+    letter-spacing:1px;
+
+    box-shadow:
+    8px 8px 0 rgba(128,0,0,.2);
+}
+
+.scroll-text{
+    position:absolute;
+
+    right:25px;
+    bottom:15px;
+
+    writing-mode:vertical-rl;
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    color:white;
+}
+
+
+/* =========================
+   SECTION GENERAL
+========================= */
+
+section{
+    position:relative;
+}
+
+.eyebrow{
+    color:var(--red);
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+    margin-bottom:12px;
+}
+
+.section-title{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(48px,5vw,70px);
+
+    line-height:.9;
+
+    color:var(--maroon);
+
+    margin-bottom:25px;
+}
+
+.gold-line{
+    width:90px;
+    height:3px;
+
+    background:var(--gold);
+
+    margin:22px 0;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    padding:110px 7%;
+    background:var(--beige);
+}
+
+.about-layout{
+    max-width:1250px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:38% 62%;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.about-image-wrap{
+    position:relative;
+}
+
+.about-image{
+    height:520px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    z-index:2;
+
+    border:6px solid var(--red);
+}
+
+.about-image img{
+    height:100%;
+    object-fit:cover;
+    transition:.7s;
+}
+
+.about-image:hover img{
+    transform:scale(1.05);
+}
+
+.about-image-wrap::after{
+    content:"";
+
+    position:absolute;
+
+    width:90%;
+    height:90%;
+
+    border:2px solid var(--gold);
+
+    top:25px;
+    left:25px;
+
+    z-index:1;
+}
+
+.about-stamp{
+    position:absolute;
+
+    z-index:3;
+
+    right:-30px;
+    bottom:30px;
+
+    width:115px;
+    height:115px;
+
+    border-radius:50%;
+
+    background:var(--red);
+
+    color:white;
+
+    border:4px solid var(--gold);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:16px;
+
+    transform:rotate(-10deg);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.about-text{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:21px;
+
+    line-height:1.55;
+
+    max-width:680px;
+}
+
+.about-highlight{
+    margin-top:30px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    border-top:2px solid var(--red);
+
+    border-bottom:1px solid #d5bd89;
+}
+
+.highlight-item{
+    padding:18px 12px;
+
+    border-right:1px solid #d5bd89;
+}
+
+.highlight-item:last-child{
+    border:none;
+}
+
+.highlight-number{
+    color:var(--red);
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:27px;
+
+    font-weight:700;
+}
+
+
+/* =========================
+   ATTRACTION
+========================= */
+
+.attraction{
+    padding:110px 7%;
+    background:#E8D1A7;
+}
+
+.attraction-heading{
+    max-width:1250px;
+
+    margin:auto auto 55px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+}
+
+.attraction-heading p{
+    max-width:330px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:19px;
+
+    line-height:1.4;
+}
+
+.attraction-grid{
+    max-width:1250px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    1fr
+    1.3fr
+    1fr;
+
+    gap:14px;
+}
+
+.attraction-card{
+    height:480px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    border:4px solid var(--red);
+
+    cursor:pointer;
+}
+
+.attraction-card:nth-child(2){
+    height:550px;
+
+    border-color:var(--gold);
+}
+
+.attraction-card img{
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.7s;
+}
+
+.attraction-card:hover img{
+    transform:scale(1.08);
+}
+
+.attraction-card::after{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        transparent 30%,
+        rgba(65,0,0,.95)
+    );
+}
+
+.attraction-content{
+    position:absolute;
+
+    bottom:0;
+    left:0;
+    right:0;
+
+    z-index:2;
+
+    padding:30px;
+
+    color:white;
+}
+
+.attraction-number{
+    color:#f1c85a;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+}
+
+.attraction-content h3{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:32px;
+
+    margin:7px 0;
+}
+
+
+/* =========================
+   ACTIVITIES
+========================= */
+
+.activities{
+    padding:100px 7%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #650000,
+        #8B0000
+    );
+
+    color:white;
+}
+
+.activities::before{
+    content:"福   吉   祥   福   吉   祥";
+
+    position:absolute;
+
+    top:20px;
+    left:0;
+
+    width:100%;
+
+    text-align:center;
+
+    color:var(--gold);
+
+    opacity:.18;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:25px;
+
+    letter-spacing:20px;
+}
+
+.activity-layout{
+    max-width:1250px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:37% 63%;
+
+    gap:60px;
+}
+
+.activities .section-title{
+    color:white;
+}
+
+.activities .eyebrow{
+    color:#f4d68d;
+}
+
+.activity-intro p{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:21px;
+
+    line-height:1.5;
+
+    max-width:380px;
+}
+
+.activity-grid{
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    border-left:1px solid rgba(255,255,255,.3);
+
+    border-top:1px solid rgba(255,255,255,.3);
+}
+
+.activity-item{
+    padding:35px;
+
+    border-right:1px solid rgba(255,255,255,.3);
+
+    border-bottom:1px solid rgba(255,255,255,.3);
+
+    transition:.3s;
+}
+
+.activity-item:hover{
+    background:rgba(218,165,32,.12);
+}
+
+.activity-icon{
+    font-size:28px;
+
+    color:#e4bd58;
+
+    margin-bottom:17px;
+}
+
+.activity-item h3{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:27px;
+
+    margin-bottom:7px;
+}
+
+
+/* =========================
+   Souvenir & UMKM
+========================= */
+
+.culinary{
+    padding:110px 7%;
+
+    background:var(--beige);
+}
+
+.culinary-head{
+    max-width:1250px;
+
+    margin:auto auto 50px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+}
+
+.culinary-head p{
+    max-width:350px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:19px;
+
+    line-height:1.4;
+}
+
+.food-grid{
+    max-width:1250px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    1.35fr
+    1fr
+    1fr;
+
+    gap:18px;
+}
+
+.food-card{
+    border-bottom:4px solid var(--red);
+
+    overflow:hidden;
+
+    background:#fff;
+}
+
+.food-image{
+    height:270px;
+
+    overflow:hidden;
+}
+
+.food-card:first-child .food-image{
+    height:360px;
+}
+
+.food-image img{
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s;
+}
+
+.food-card:hover img{
+    transform:scale(1.06);
+}
+
+.food-info{
+    padding:17px 15px 23px;
+}
+
+.food-info h3{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:30px;
+
+    color:var(--maroon);
+}
+
+
+/* =========================
+   INFORMATION
+========================= */
+
+.information{
+    padding:90px 7%;
+
+    background:var(--gold);
+}
+
+.information-inner{
+    max-width:1250px;
+    margin:auto;
+}
+
+.info-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    background:var(--beige);
+
+    border:4px solid var(--red);
+}
+
+.info-item{
+    padding:20px 25px;
+    border-right:1px solid #d2b771;
+    
+}
+}
+
+.info-item:last-child{
+    border:none;
+}
+
+.info-icon{
+    font-size:27px;
+
+    color:var(--red);
+
+    margin-bottom:13px;
+}
+
+.info-item h3{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:28px;
+
+    color:var(--maroon);
+
+    margin-bottom:7px;
+}
+
+.info-item p{
+    font-size:13px;
+
+    line-height:1.5;
+}
+
+.map-link{
+    display:inline-block;
+
+    margin-top:14px;
+
+    color:var(--red);
+
+    font-size:12px;
+
+    font-weight:600;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+    padding:110px 7%;
+
+    background:#E8D1A7;
+}
+
+.gallery-head{
+    max-width:1250px;
+
+    margin:auto auto 45px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+}
+
+.gallery-head p{
+    font-family:"Allura",cursive;
+
+    font-size:30px;
+
+    color:var(--red);
+}
+
+.gallery-grid{
+    max-width:1250px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    2fr
+    1fr
+    1fr;
+
+    grid-template-rows:
+    240px
+    240px;
+
+    gap:10px;
+}
+
+.gallery-item{
+    overflow:hidden;
+
+    position:relative;
+
+    border:3px solid var(--red);
+}
+
+.gallery-item:first-child{
+    grid-row:span 2;
+
+    border-color:var(--gold);
+}
+
+.gallery-item img{
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.07);
+}
+
+.gallery-item::after{
+    content:"View →";
+
+    position:absolute;
+
+    bottom:15px;
+    right:15px;
+
+    background:var(--red);
+
+    color:white;
+
+    padding:7px 11px;
+
+    font-size:10px;
+
+    opacity:0;
+
+    transition:.3s;
+}
+
+.gallery-item:hover::after{
+    opacity:1;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:60px 7%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #520000,
+        #800000
+    );
+
+    color:white;
+
+    border-top:5px solid var(--gold);
+}
+
+.footer-inner{
+    max-width:1250px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.footer-name{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:32px;
+}
+
+.footer-script{
+    font-family:"Allura",cursive;
+
+    font-size:30px;
+
+    color:#e2bd57;
+}
+
+.footer-copy{
+    text-align:right;
+
+    font-size:11px;
+
+    line-height:1.7;
+
+    opacity:.9;
+}
+
+.footer-copy a{
+    color:#f3cf67;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.footer-copy a:hover{
+    color:white;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+.reveal{
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+.reveal.active{
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes swing{
+
+    0%,100%{
+        transform:rotate(-2deg);
+    }
+
+    50%{
+        transform:rotate(2deg);
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:950px){
+
+    .nav-menu{
+        display:none;
+    }
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        background:
+        linear-gradient(
+            145deg,
+            #E8D1A7 0%,
+            #E8D1A7 68%,
+            #800000 68%,
+            #650000 100%
+        );
+    }
+
+    .hero-content{
+        padding-left:20px;
+    }
+
+    .hero-frame{
+        height:500px;
+    }
+
+    .about-layout,
+    .activity-layout{
+        grid-template-columns:1fr;
+    }
+
+    .attraction-heading,
+    .culinary-head,
+    .gallery-head{
+        display:block;
+    }
+
+    .attraction-heading p,
+    .culinary-head p{
+        margin-top:15px;
+    }
+
+    .attraction-grid{
+        grid-template-columns:1fr;
+    }
+
+    .attraction-card,
+    .attraction-card:nth-child(2){
+        height:430px;
+    }
+
+    .food-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .info-item{
+        border-right:none;
+        border-bottom:1px solid #d2b771;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+
+        grid-template-rows:
+        230px
+        230px
+        230px;
+    }
+
+    .gallery-item:first-child{
+        grid-column:span 2;
+        grid-row:span 1;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .navbar{
+        padding:0 20px;
+    }
+
+    .top-logos{
+        gap:5px;
+        margin-right:8px;
+    }
+
+    .kab-tuban-logo{
+        width:32px;
+        height:32px;
+    }
+
+    .ayo-ning-logo{
+        width:52px;
+        height:38px;
+    }
+
+    .nav-button{
+        display:none;
+    }
+
+    .hero{
+        padding:120px 25px 60px;
+    }
+
+    .hero-content{
+        padding-left:0;
+    }
+
+    .hero h1{
+        font-size:68px;
+        letter-spacing:-2px;
+    }
+
+    .script-title{
+        font-size:36px;
+    }
+
+    .hero-frame{
+        height:410px;
+
+        border-radius:
+        150px
+        150px
+        5px
+        5px;
+    }
+
+    .hero-tag{
+        left:10px;
+        bottom:20px;
+    }
+
+    .about,
+    .attraction,
+    .activities,
+    .culinary,
+    .gallery{
+        padding:75px 25px;
+    }
+
+    .section-title{
+        font-size:50px;
+    }
+
+    .about-image{
+        height:400px;
+    }
+
+    .about-highlight{
+        grid-template-columns:1fr;
+    }
+
+    .highlight-item{
+        border-right:none;
+        border-bottom:1px solid #d5bd89;
+    }
+
+    .activity-grid{
+        grid-template-columns:1fr;
+    }
+
+    .food-grid{
+        grid-template-columns:1fr;
+    }
+
+    .food-card:first-child .food-image,
+    .food-image{
+        height:260px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+
+        grid-template-rows:
+        repeat(5,220px);
+    }
+
+    .gallery-item:first-child{
+        grid-column:auto;
+    }
+
+    .footer-inner{
+        display:block;
+    }
+
+    .footer-copy{
+        text-align:left;
+        margin-top:20px;
+    }
+
+    .lantern-right{
+        display:none;
+    }
+
+    .lantern-left{
+        left:0;
+        top:135px;
+        transform:scale(.62);
+    }
+
+}
+
+
+
+
+/* =========================
+   POSTER PROMOSI
+========================= */
+.poster-section{
+    padding:90px 7%;
+    background:var(--cream);
+}
+
+.poster-inner{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+}
+
+.poster-inner .section-title{
+    margin-bottom:14px;
+}
+
+.poster-intro{
+    max-width:650px;
+    margin:0 auto 38px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:20px;
+    line-height:1.5;
+}
+
+.poster-frame{
+    max-width:720px;
+    margin:auto;
+    padding:10px;
+    background:#fff;
+    border:2px solid var(--gold);
+    box-shadow:12px 12px 0 rgba(101,0,0,.18);
+}
+
+.poster-frame img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.souvenir-visual{
+    min-height:220px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#f6e8bd,#ead29a);
+    color:var(--red);
+}
+
+.souvenir-visual i{
+    font-size:72px;
+}
+
+@media(max-width:700px){
+    .top-logos{
+        gap:6px;
+        margin-right:9px;
+    }
+
+    .kab-tuban-logo{
+        width:38px;
+        height:38px;
+    }
+
+    .ayo-ning-logo{
+        width:82px;
+        height:48px;
+    }
+
+    .poster-section{
+        padding:70px 22px;
+    }
+}
+
+/* =========================
+   VIDEO PROMOSI TIKTOK
+========================= */
+.tiktok-promo{
+    padding:100px 7%;
+    background:var(--beige);
+}
+
+.tiktok-promo-inner{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:40% 60%;
+    gap:55px;
+    align-items:center;
+}
+
+.tiktok-promo-text p{
+    font-family:"Cormorant Garamond",serif;
+    font-size:20px;
+    line-height:1.55;
+    max-width:430px;
+}
+
+.tiktok-video{
+    width:100%;
+    max-width:340px;
+    height:600px;
+    margin:auto;
+    border:4px solid var(--red);
+    border-radius:14px;
+    overflow:hidden;
+    background:#000;
+    box-shadow:12px 12px 0 rgba(218,165,32,.75);
+}
+
+.tiktok-video iframe{
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+.tiktok-button{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    margin-top:24px;
+    padding:13px 19px;
+    background:var(--red);
+    color:white;
+    border:1px solid var(--gold);
+    border-radius:3px;
+    font-size:13px;
+    transition:.3s;
+}
+
+.tiktok-button:hover{
+    background:var(--darkred);
+    transform:translateY(-3px);
+}
+
+@media(max-width:950px){
+    .tiktok-promo-inner{
+        grid-template-columns:1fr;
+    }
+
+    .tiktok-promo-text p{
+        max-width:650px;
+    }
+}
+
+@media(max-width:600px){
+    .tiktok-promo{
+        padding:75px 25px;
+    }
+
+    .tiktok-video{
+        height:560px;
+        box-shadow:8px 8px 0 rgba(218,165,32,.75);
+    }
+}
+
+/* =========================
+   CONTACT / SOCIAL CTA
+========================= */
+.contact-cta{
+    width:min(1100px, calc(100% - 40px));
+    margin:70px auto;
+    padding:34px 38px;
+    border:1px solid rgba(218,165,32,.45);
+    background:rgba(245,245,220,.72);
+    border-radius:22px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:28px;
+    box-shadow:0 16px 40px rgba(53,18,15,.10);
+}
+
+.contact-cta-text h3{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(28px,4vw,42px);
+    color:var(--darkred);
+    margin-bottom:7px;
+}
+
+.contact-cta-text p{
+    color:var(--dark);
+    font-size:15px;
+    line-height:1.7;
+    max-width:620px;
+}
+
+.contact-buttons{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.contact-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    padding:13px 18px;
+    border-radius:999px;
+    background:var(--red);
+    color:#fff;
+    font-weight:600;
+    font-size:13px;
+    white-space:nowrap;
+    border:1px solid var(--red);
+    transition:.25s ease;
+}
+
+.contact-button:hover{
+    background:var(--darkred);
+    transform:translateY(-2px);
+    box-shadow:0 10px 22px rgba(101,0,0,.20);
+}
+
+.contact-button.secondary{
+    background:transparent;
+    color:var(--darkred);
+    border-color:var(--darkred);
+}
+
+.contact-button.secondary:hover{
+    background:var(--darkred);
+    color:#fff;
+}
+
+.contact-icon{
+    width:25px;
+    height:25px;
+    display:inline-grid;
+    place-items:center;
+    font-size:17px;
+    line-height:1;
+}
+
+.social-float-wrap{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    z-index:9999;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:9px;
+}
+
+.social-float{
+    width:48px;
+    height:48px;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    background:var(--darkred);
+    color:#fff;
+    border:2px solid rgba(218,165,32,.85);
+    box-shadow:0 10px 28px rgba(53,18,15,.28);
+    font-size:18px;
+    font-weight:700;
+    transition:.25s ease;
+}
+
+.social-float:hover{
+    transform:translateY(-3px) scale(1.04);
+    background:var(--red);
+}
+
+.social-float.phone{
+    background:var(--red);
+}
+
+.social-float-label{
+    position:absolute;
+    right:60px;
+    padding:8px 12px;
+    border-radius:999px;
+    background:var(--darkred);
+    color:#fff;
+    font-size:11px;
+    font-weight:600;
+    white-space:nowrap;
+    opacity:0;
+    pointer-events:none;
+    transform:translateX(8px);
+    transition:.2s ease;
+}
+
+.social-float:hover .social-float-label{
+    opacity:1;
+    transform:translateX(0);
+}
+
+@media(max-width:900px){
+    .contact-cta{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .contact-buttons{
+        width:100%;
+        justify-content:flex-start;
+    }
+}
+
+@media(max-width:700px){
+    .contact-cta{
+        margin:50px auto;
+        padding:26px 22px;
+    }
+
+    .contact-buttons{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .contact-button{
+        width:100%;
+    }
+
+    .social-float-wrap{
+        right:14px;
+        bottom:14px;
+        gap:7px;
+    }
+
+    .social-float{
+        width:43px;
+        height:43px;
+        font-size:16px;
+    }
+
+    .social-float-label{
+        display:none;
+    }
+}
+
+
+.souvenir-image{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+}
+
+</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar" id="navbar">
+
+    <div class="nav-left">
+
+        <div class="top-logos">
+            <img class="top-logo kab-tuban-logo" src="c:\Users\User\Downloads\WhatsApp_Image_2026-09-21_at_14.53.15-removebg-preview.png" alt="Logo Kabupaten Tuban">
+            <img class="top-logo ayo-ning-logo" src="c:\Users\User\Downloads\ayo_ning_tuban-removebg-preview.png" alt="Logo Ayo Ning Tuban">
+        </div>
+
+        <a href="#home" class="logo">
+            <div class="logo-icon">
+                🏯
+            </div>
+
+            <div>
+                <div class="logo-title">
+                    Kwan Sing Bio
+                </div>
+
+                <div class="logo-sub">
+                    TUBAN · EAST JAVA
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+
+    <div class="nav-menu">
+
+        <a href="#tentang">
+            Tentang
+        </a>
+
+        <a href="#daya-tarik">
+            Daya Tarik
+        </a>
+
+        <a href="#aktivitas">
+            Aktivitas
+        </a>
+
+        <a href="#Souvenir">
+            Souvenir
+        </a>
+
+        <a href="#informasi">
+            Informasi
+        </a>
+
+        <a href="#galeri">
+            Galeri
+        </a>
+
+    </div>
+
+
+    <a
+        class="nav-button"
+        href="https://www.google.com/maps/search/?api=1&query=Klenteng+Kwan+Sing+Bio+Tuban"
+        target="_blank"
+    >
+        ◉ Lokasi
+    </a>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+
+    <!-- LAMPION -->
+
+    <div class="lantern lantern-left">
+
+        <div class="lantern-string"></div>
+
+        <div class="lantern-top"></div>
+
+        <div class="lantern-body">
+            福
+        </div>
+
+        <div class="lantern-bottom"></div>
+
+        <div class="lantern-tassel"></div>
+
+    </div>
+
+
+    <div class="lantern lantern-right">
+
+        <div class="lantern-string"></div>
+
+        <div class="lantern-top"></div>
+
+        <div class="lantern-body">
+            吉
+        </div>
+
+        <div class="lantern-bottom"></div>
+
+        <div class="lantern-tassel"></div>
+
+    </div>
+
+
+
+    <!-- HERO TEXT -->
+
+    <div class="hero-content">
+
+        <div class="script-title">
+
+            Where Culture Meets,
+           
+            <br>
+            Heritage Lives On.
+
+        </div>
+
+
+        <h1>
+
+            Kwan Sing
+            <br>
+
+            <span>
+                Bio.
+            </span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            <strong>
+                Explore the Heritage of Kwan Sing Bio
+            </strong>
+
+            — mengenal budaya, sejarah, dan nilai spiritual dalam satu perjalanan.
+
+        </p>
+
+
+        <div class="hero-actions">
+
+            <a
+                href="#tentang"
+                class="btn-primary"
+            >
+                Explore Heritage →
+            </a>
+
+
+            <a
+                href="#daya-tarik"
+                class="btn-secondary"
+            >
+                Discover More
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- HERO IMAGE -->
+
+    <div class="hero-visual">
+
+        <div class="hero-frame">
+
+            <img
+                src="c:\Users\User\Downloads\klenteng lagi istighfar (1).jpg"
+                alt="Patung Kwan Sing Bio"
+            >
+
+        </div>
+
+
+        <div class="hero-tag">
+            TUBAN · JAWA TIMUR
+        </div>
+
+
+        <div class="scroll-text">
+            SCROLL TO EXPLORE ↓
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<div class="ornament-line"></div>
+
+
+
+<!-- =========================
+     TENTANG
+========================= -->
+
+<section class="about" id="tentang">
+
+    <div class="about-layout">
+
+
+        <div class="about-image-wrap">
+
+            <div class="about-image">
+
+                <img
+                    src="c:\Users\User\Downloads\HDk.png"
+                    alt="Bangunan Klenteng Kwan Sing Bio"
+                >
+
+            </div>
+
+
+            <div class="about-stamp">
+
+                HERITAGE
+                <br>
+                TUBAN
+
+            </div>
+
+        </div>
+
+
+
+        <div class="reveal">
+
+            <div class="eyebrow">
+                THE STORY
+            </div>
+
+
+            <h2 class="section-title">
+
+                Lebih dari
+                <br>
+                sekadar tempat.
+
+            </h2>
+
+
+            <div class="gold-line"></div>
+
+
+            <p class="about-text">
+
+                Kwan Sing Bio merupakan salah satu bagian dari perjalanan budaya dan sejarah Kota Tuban.
+
+                <br><br>
+
+                Mengunjunginya bukan hanya tentang melihat sebuah bangunan, tetapi juga mengenal keberagaman budaya, arsitektur, sejarah, serta kehidupan masyarakat yang berkembang di sekitarnya.
+
+            </p>
+
+
+            <div class="about-highlight">
+
+
+                <div class="highlight-item">
+
+                    <div class="highlight-number">
+                        01
+                    </div>
+
+                    <small>
+                        Warisan budaya
+                    </small>
+
+                </div>
+
+
+                <div class="highlight-item">
+
+                    <div class="highlight-number">
+                        02
+                    </div>
+
+                    <small>
+                        Nilai sejarah
+                    </small>
+
+                </div>
+
+
+                <div class="highlight-item">
+
+                    <div class="highlight-number">
+                        03
+                    </div>
+
+                    <small>
+                        Keberagaman budaya
+                    </small>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     DAYA TARIK
+========================= -->
+
+<section class="attraction" id="daya-tarik">
+
+
+    <div class="attraction-heading reveal">
+
+
+        <div>
+
+            <div class="eyebrow">
+                WHAT TO EXPLORE
+            </div>
+
+            <h2 class="section-title">
+                Daya Tarik.
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            Temukan sisi spiritual, budaya, sejarah, hingga kehidupan lokal yang membuat perjalanan di Tuban terasa berbeda.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="attraction-grid">
+
+
+        <!-- SPIRITUAL -->
+
+        <div class="attraction-card reveal">
+
+            <img
+                src="c:\Users\User\Desktop\foto klenteng\download (19).jpg.jpeg"
+                alt="Dupa dan persembahan"
+            >
+
+
+            <div class="attraction-content">
+
+                <div class="attraction-number">
+                    01 — SPIRITUAL & SEJARAH
+                </div>
+
+
+                <h3>
+                    Jejak & Makna
+                </h3>
+
+
+                <p>
+                    Mengenal suasana spiritual, tradisi, dan sejarah yang hidup di kawasan Kwan Sing Bio.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ARSITEKTUR -->
+
+        <div class="attraction-card reveal">
+
+            <img
+                src="c:\Users\User\Desktop\foto klenteng\3.jpeg"
+                alt="Klenteng dan kolam naga"
+            >
+
+
+            <div class="attraction-content">
+
+                <div class="attraction-number">
+                    02 — AKULTURASI BUDAYA
+                </div>
+
+
+                <h3>
+                    Culture in Harmony
+                </h3>
+
+
+                <p>
+                    Melihat perpaduan unsur budaya dan arsitektur yang menjadi bagian dari kekayaan sejarah Tuban.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LOCAL -->
+
+        <div class="attraction-card reveal">
+
+            <img
+                src="c:\Users\User\Desktop\foto klenteng\🦚A  Meticulous process & craftsmanship won’t lie 🤫_ 🔥 such a craftsmanship which takes time to make ! This  hand woven ( tenun) and hand drawn batik gedog Tuban (East Java) with its distinctive motif and pattern,.jpg"
+                alt="Cendera mata khas Kwan Sing Bio"
+            >
+
+
+            <div class="attraction-content">
+
+                <div class="attraction-number">
+                    03 — SOUVENIR KHAS
+                </div>
+
+
+                <h3>
+                    Oleh-Oleh Tionghoa
+                </h3>
+
+
+                <p>
+                    More Than Just a Souvenir.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<div class="ornament-line"></div>
+
+
+
+<!-- =========================
+     AKTIVITAS
+========================= -->
+
+<section class="activities" id="aktivitas">
+
+
+    <div class="activity-layout">
+
+
+        <div class="activity-intro reveal">
+
+            <div class="eyebrow">
+                EXPERIENCE THE JOURNEY
+            </div>
+
+
+            <h2 class="section-title">
+
+                Make the
+                <br>
+                journey yours.
+
+            </h2>
+
+
+            <p>
+
+                Tidak hanya melihat. Rasakan, jelajahi, dan kenali cerita di balik perjalananmu.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="activity-grid">
+
+
+            <div class="activity-item reveal">
+
+                <div class="activity-icon">
+                    ♡
+                </div>
+
+                <h3>
+                    Mengenal Tradisi
+                </h3>
+
+                <p>
+                    Mengamati suasana persembahan, dupa, dan tradisi yang menjadi bagian dari tempat ibadah.
+                </p>
+
+            </div>
+
+
+
+            <div class="activity-item reveal">
+
+                <div class="activity-icon">
+                    ◉
+                </div>
+
+                <h3>
+                    Menikmati Arsitektur
+                </h3>
+
+                <p>
+                    Mengamati detail bangunan, ornamen, warna, dan perpaduan budaya.
+                </p>
+
+            </div>
+
+
+
+            <div class="activity-item reveal">
+
+                <div class="activity-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    Jelajah Budaya
+                </h3>
+
+                <p>
+                    Mengenal keberagaman dan warisan budaya masyarakat Tuban.
+                </p>
+
+            </div>
+
+
+
+            <div class="activity-item reveal">
+
+                <div class="activity-icon">
+                    ◇
+                </div>
+
+                <h3>
+                    Gantungan Kunci
+                </h3>
+
+                <p>
+                    Gantungan kunci bertema Tionghoa yang dapat dijadikan cendera mata.
+                </p>
+
+            </div>
+
+
+
+            <div class="activity-item reveal">
+
+                <div class="activity-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    Mainan
+                </h3>
+
+                <p>
+                    Mainan dan kerajinan kecil dengan bentuk serta warna khas budaya Tionghoa.
+                </p>
+
+            </div>
+
+
+
+            <div class="activity-item reveal">
+
+                <div class="activity-icon">
+                    ♢
+                </div>
+
+                <h3>
+                    Pakaian Tionghoa
+                </h3>
+
+                <p>
+                    Pakaian bergaya Tionghoa dengan motif dan warna khas sebagai pilihan cendera mata.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     OLEH-OLEH
+========================= -->
+
+<section class="culinary" id="Souvenir">
+
+
+    <div class="culinary-head reveal">
+
+
+        <div>
+
+            <div class="eyebrow">
+                OLEH-OLEH KHAS TIONGHOA
+            </div>
+
+            <h2 class="section-title">
+               More Than Just a Souvenir.
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            Temukan beragam produk khas bernuansa Tionghoa yang menghadirkan warna, budaya, dan cerita dalam setiap pilihan.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="food-grid">
+
+
+        <!-- GANTUNGAN KUNCI -->
+
+        <div class="food-card reveal">
+
+            <div class="food-image souvenir-visual">
+                <!-- GANTI about:blank dengan link gambar GANTUNGAN KUNCI -->
+                <img class="souvenir-image" src="c:\Users\User\Downloads\WhatsApp Image 2026-09-28 at 14.30.36.jpeg" alt="Gantungan Kunci">
+            </div>
+
+            <div class="food-info">
+                <h3>
+                    Souvenir & Local Finds
+                </h3>
+                <p>
+                    Beragam cendera mata dan produk khas yang cocok untuk membawa pulang sedikit cerita dari perjalanan.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- MAINAN -->
+
+        <div class="food-card reveal">
+
+            <div class="food-image souvenir-visual">
+                <!-- GANTI about:blank dengan link gambar MAINAN -->
+                <img class="souvenir-image" src="c:\Users\User\Downloads\WhatsApp Image 2026-09-28 at 14.27.09.jpeg" alt="Mainan">
+            </div>
+
+            <div class="food-info">
+                <h3>
+                    Colorful Little Treasures
+                </h3>
+                <p>
+                    Beragam mainan dan kerajinan unik dengan warna serta bentuk yang menarik.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- PAKAIAN TIONGHOA -->
+
+        <div class="food-card reveal">
+
+            <div class="food-image souvenir-visual">
+                <!-- GANTI about:blank dengan link gambar PAKAIAN TIONGHOA -->
+                <img class="souvenir-image" src="c:\Users\User\Downloads\WhatsApp Image 2026-09-28 at 14.24.54.jpeg" alt="Pakaian Tionghoa">
+            </div>
+
+            <div class="food-info">
+                <h3>
+                    Culture & Style
+                </h3>
+                <p>
+                    Pilihan produk bernuansa budaya Tionghoa dengan detail yang khas dan menarik.
+                </p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     INFORMASI
+========================= -->
+
+<section class="information" id="informasi">
+
+
+    <div class="information-inner">
+
+
+        <div class="reveal">
+
+            <div class="eyebrow">
+                PLAN YOUR VISIT
+            </div>
+
+            <h2 class="section-title">
+                Informasi Wisata.
+            </h2>
+
+        </div>
+
+
+
+        <div class="info-grid">
+
+
+            <div class="info-item reveal">
+
+                <div class="info-icon">
+                    ◷
+                </div>
+
+                <h3>
+                    Jam Operasional
+                </h3>
+
+                <p>
+                    Senin-Jumat  06.00-21.30<br>
+                    Sabtu-Minggu 06.00-22.00
+                </p>
+
+            </div>
+
+
+
+            <div class="info-item reveal">
+
+                <div class="info-icon">
+                    ◇
+                </div>
+
+                <h3>
+                    Tiket Masuk
+                </h3>
+
+                <p>
+                    Gratis.
+                </p>
+
+            </div>
+
+
+
+            <div class="info-item reveal">
+
+                
+
+    <div class="info-icon">
+        ⌖
+   
+        
+    </div>
+
+    <h3>Lokasi</h3>
+
+    <p>
+        Jl. Pantura, Karangsari, Kutorejo, Kec. Tuban,
+        Kabupaten Tuban, Jawa Timur
+    </p>
+
+    <a href="https://maps.app.goo.gl/4kUKJBRiXPgmC4xu7"
+       target="_blank"
+       class="map-link">
+        Open Google Maps →
+    </a>
+
+</div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="gallery" id="galeri">
+
+
+    <div class="gallery-head reveal">
+
+
+        <div>
+
+            <div class="eyebrow">
+                VISUAL JOURNEY
+            </div>
+
+            <h2 class="section-title">
+                Gallery.
+            </h2>
+
+        </div>
+
+
+        <p>
+            See the story.
+        </p>
+
+    </div>
+
+
+
+    <div class="gallery-grid">
+
+
+        <div class="gallery-item reveal">
+
+            <img
+                src="c:\Users\User\Desktop\foto klenteng\klenteng foto.jpeg"
+                alt="Patung Kwan Sing Bio"
+            >
+
+        </div>
+
+
+        <div class="gallery-item reveal">
+
+            <img
+                src="c:\Users\User\Desktop\foto klenteng\WhatsApp Image 2026-09-22 at 15.02.35 (1).jpeg"
+                alt="Bangunan klenteng"
+            >
+
+        </div>
+
+
+        <div class="gallery-item reveal">
+
+            <img
+                src="c:\Users\User\Desktop\foto klenteng\WhatsApp Image 2026-09-22 at 15.02.35.jpeg"
+                alt="Kolam naga"
+            >
+
+        </div>
+
+
+        <div class="gallery-item reveal">
+
+            <img
+                src="c:\Users\User\Desktop\foto klenteng\WhatsApp Image 2026-09-22 at 15.02.36 (1).jpeg"
+                alt="Persembahan dan dupa"
+            >
+
+        </div>
+
+
+        <div class="gallery-item reveal">
+
+            <img
+                src="c:\Users\User\Desktop\foto klenteng\WhatsApp Image 2026-09-22 at 15.02.36.jpeg"
+                alt="Kerajinan lokal Tuban"
+            >
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =========================
+     POSTER PROMOSI
+========================= -->
+
+<section class="poster-section" id="poster-promosi">
+
+    <div class="poster-inner">
+
+        <div class="eyebrow reveal">
+            TUBAN HERITAGE GUIDE
+        </div>
+
+        <h2 class="section-title reveal">
+            Explore Kwan Sing Bio.
+        </h2>
+
+        <p class="poster-intro reveal">
+            Lihat gambaran singkat daya tarik, fasilitas, lokasi, dan pengalaman yang bisa ditemukan di Klenteng Kwan Sing Bio.
+        </p>
+
+        <div class="poster-frame reveal">
+            <img src="c:\Users\User\Downloads\poster kwan sin bio (1).png" alt="Poster wisata Klenteng Kwan Sing Bio Tuban">
+        </div>
+
+    </div>
+
+</section>
+
+<div class="ornament-line"></div>
+
+<!-- =========================
+     VIDEO PROMOSI
+========================= -->
+
+<section class="tiktok-promo" id="video-promosi">
+
+    <div class="tiktok-promo-inner">
+
+        <div class="tiktok-promo-text reveal">
+
+            <div class="eyebrow">
+                VIDEO PROMOSI
+            </div>
+
+            <h2 class="section-title">
+                A Glimpse of Kwan Sing Bio.
+            </h2>
+
+            <div class="gold-line"></div>
+
+            <p>
+                Lihat video promosi Kwan Sing Bio dan kenali suasana,
+                budaya, serta pesona Klenteng Kwan Sing Bio melalui TikTok.
+            </p>
+
+            <a
+                class="tiktok-button"
+                href="https://vt.tiktok.com/ZSqQebgvL/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i class="fa-brands fa-tiktok"></i>
+                Tonton di TikTok →
+            </a>
+
+        </div>
+
+        <div class="tiktok-video reveal">
+            <iframe
+                src="https://www.tiktok.com/embed/v2/7685328715886251282"
+                title="Video promosi Klenteng Kwan Sing Bio"
+                allow="autoplay; encrypted-media;"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="ornament-line"></div>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+
+
+<div class="social-float-wrap" aria-label="Kontak dan media sosial Kwan Sing Bio">
+    <a class="social-float" href="https://www.instagram.com/kwansingbio.official?stkn=OHQ0anVyMXNsa2Vw" target="_blank" rel="noopener noreferrer" aria-label="Instagram Kwan Sing Bio">
+        <i class="fa-brands fa-instagram"></i>
+        <span class="social-float-label">Instagram</span>
+    </a>
+
+    <a class="social-float" href="https://www.tiktok.com/@kelentengkwansingbio?_r=1&_t=ZS-9A57Wp3PZ49" target="_blank" rel="noopener noreferrer" aria-label="TikTok Kwan Sing Bio">
+        <i class="fa-brands fa-tiktok"></i>
+        <span class="social-float-label">TikTok</span>
+    </a>
+
+    <a class="social-float" href="https://x.com/kwansingbio" target="_blank" rel="noopener noreferrer" aria-label="Twitter atau X Kwan Sing Bio">
+        <i class="fa-brands fa-x-twitter"></i>
+        <span class="social-float-label">Twitter / X</span>
+    </a>
+
+    <a class="social-float phone" href="tel:+62356322145" aria-label="Telepon Kwan Sing Bio">
+        <i class="fa-solid fa-phone"></i>
+        <span class="social-float-label">(0356) 322145</span>
+    </a>
+</div>
+
+<footer>
+
+
+    <div class="footer-inner">
+
+
+        <div>
+
+            <div class="footer-name">
+                Kwan Sing Bio · Tuban
+            </div>
+
+
+            <div class="footer-script">
+                Where Culture Meets, Heritage Lives On.
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-copy">
+
+            <a href="tel:+62356322145">
+                <i class="fa-solid fa-phone"></i> (0356) 322145
+            </a>
+            <br>
+            <a href="https://www.instagram.com/kwansingbio.official?stkn=OHQ0anVyMXNsa2Vw" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a> ·
+            <a href="https://www.tiktok.com/@kelentengkwansingbio?_r=1&_t=ZS-9A57Wp3PZ49" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-tiktok"></i> TikTok
+            </a> ·
+            <a href="https://x.com/kwansingbio" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-x-twitter"></i> X
+            </a>
+
+            <br><br>
+
+            Explore · Discover · Preserve
+            <br>
+            © 2026 Kwan Sing Bio Heritage
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<script>
+
+
+/* NAVBAR berubah saat scroll */
+
+const navbar =
+document.getElementById("navbar");
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        if(window.scrollY > 50){
+
+            navbar.classList.add("scrolled");
+
+        }else{
+
+            navbar.classList.remove("scrolled");
+
+        }
+
+    }
+);
+
+
+/* ANIMASI SCROLL */
+
+const revealElements =
+document.querySelectorAll(".reveal");
+
+
+const observer =
+new IntersectionObserver(
+
+    entries => {
+
+        entries.forEach(
+            entry => {
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add("active");
+
+                }
+
+            }
+        );
+
+    },
+
+    {
+        threshold:.12
+    }
+
+);
+
+
+revealElements.forEach(
+    element =>
+    observer.observe(element)
+);
+
+
+</script>
+
+
+</body>
+</html>
